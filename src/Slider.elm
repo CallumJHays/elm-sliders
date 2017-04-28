@@ -66,10 +66,15 @@ update msg model =
 Used to render the view correctly.
 
 MinVal -> the inclusive lower bound of the input range element.
+
 MaxVal -> the inclusive upper bound of the input range element.
+
 Val -> the current value of the input range element.
+
 Step -> the smallest possible increment by input in the input range element.
+
 OnChange -> the inclusive lower bound of the input range element.
+
 Attr -> Custom Html attributes to be applied to the input element.
 -}
 type Property msg
@@ -92,11 +97,11 @@ view model =
 the 'current value', it may be simpler to use this to define your own slider.
 
 For example:
+
     import Slider exposing (MinVal, MaxVal, Step, onChange, props2view)
 
     type Msg = NoOp | CustomSliderUpdate Float
 
-    ...
     viewSlider : Html Msg
         [MinVal 10, MaxVal 20, Step = 0.5, onChange CustomSliderUpdate]
             |> props2view
